@@ -1,0 +1,95 @@
+{
+  "name": "Gemini Ask",
+  "icon": "iconify:ri:gemini-fill",
+  "entitlements": ["network"],
+  "module": "gemini-ask.js",
+  "options": [
+    {
+      "identifier": "config",
+      "label": { "en": "Config", "zh-Hant": "設定", "zh-Hans": "配置" },
+      "type": "string",
+      "description": {
+        "en": "Google AI: API Key. Vertex AI: paste Service Account JSON or {\"project_id\":\"...\",\"access_token\":\"...\"}",
+        "zh-Hant": "Google AI 填入 API Key；Vertex AI 貼上 Service Account JSON 或 {\"project_id\":\"...\",\"access_token\":\"...\"}",
+        "zh-Hans": "Google AI 填入 API Key；Vertex AI 粘贴 Service Account JSON 或 {\"project_id\":\"...\",\"access_token\":\"...\"}"
+      }
+    },
+    {
+      "identifier": "backend",
+      "label": { "en": "Backend", "zh-Hant": "後端", "zh-Hans": "后端" },
+      "type": "multiple",
+      "values": ["google-ai", "vertex-ai"],
+      "description": {
+        "en": "Select API backend",
+        "zh-Hant": "選擇 API 後端",
+        "zh-Hans": "选择 API 后端"
+      }
+    },
+    {
+      "identifier": "model",
+      "label": { "en": "AI Model", "zh-Hant": "AI 模型", "zh-Hans": "AI 模型" },
+      "type": "multiple",
+      "values": [
+        "gemini-2.5-flash",
+        "gemini-2.5-flash-lite",
+        "gemini-2.5-flash-lite-preview-09-2025",
+        "gemini-2.0-flash",
+        "gemini-2.0-flash-001",
+        "gemini-2.0-flash-lite-001",
+        "gemini-3.1-pro-preview",
+        "gemini-3.1-flash-lite-preview",
+        "gemini-3-pro-preview",
+        "imagen-3.0-generate-002"
+      ],
+      "description": {
+        "en": "gemini-3.1-* requires Vertex AI Location = global",
+        "zh-Hant": "gemini-3.1-* 需要 Vertex AI 位置設為 global",
+        "zh-Hans": "gemini-3.1-* 需要 Vertex AI 位置设为 global"
+      }
+    },
+    {
+      "identifier": "customModel",
+      "label": { "en": "Custom Model", "zh-Hant": "自定義模型", "zh-Hans": "自定义模型" },
+      "type": "string",
+      "defaultValue": "",
+      "description": {
+        "en": "Override model dropdown (e.g. gemini-2.5-pro-exp-03-25). Leave empty to use selection above.",
+        "zh-Hant": "覆蓋模型下拉（如 gemini-2.5-pro-exp-03-25），留空則使用上方選擇",
+        "zh-Hans": "覆盖模型下拉（如 gemini-2.5-pro-exp-03-25），留空则使用上方选择"
+      }
+    },
+    {
+      "identifier": "location",
+      "label": { "en": "Vertex AI Location", "zh-Hant": "Vertex AI 位置", "zh-Hans": "Vertex AI 位置" },
+      "type": "string",
+      "defaultValue": "global",
+      "description": {
+        "en": "Use 'global' for gemini-3.1 models. Or e.g. us-central1, asia-east1",
+        "zh-Hant": "gemini-3.1 模型請用 global；也可填 us-central1、asia-east1 等",
+        "zh-Hans": "gemini-3.1 模型请用 global；也可填 us-central1、asia-east1 等"
+      }
+    },
+    {
+      "identifier": "sysprompt",
+      "label": { "en": "System Prompt", "zh-Hant": "系統提示詞", "zh-Hans": "系统提示词" },
+      "type": "string",
+      "defaultValue": "",
+      "description": {
+        "en": "Set AI role and behavior (optional)",
+        "zh-Hant": "設定 AI 角色與行為（選填）",
+        "zh-Hans": "设定 AI 角色与行为（选填）"
+      }
+    },
+    {
+      "identifier": "replace",
+      "label": { "en": "Replace Selection", "zh-Hant": "替換選取文字", "zh-Hans": "替换选中文字" },
+      "type": "boolean",
+      "defaultValue": false,
+      "description": {
+        "en": "On: paste result over selected text. Off: show in popup.",
+        "zh-Hant": "開啟：結果直接替換選取文字；關閉：顯示於彈窗",
+        "zh-Hans": "开启：结果直接替换选中文字；关闭：显示在弹窗"
+      }
+    }
+  ]
+}
