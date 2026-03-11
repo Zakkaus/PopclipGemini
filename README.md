@@ -42,8 +42,7 @@ Paste the **entire contents** of your downloaded JSON key file:
   "token_uri": "https://oauth2.googleapis.com/token"
 }
 ```
-The extension auto-signs a JWT and caches the Access Token for 1 hour.
-See [Vertex AI Setup Guide](vertex-ai-setup.md) for full instructions.
+See the [Vertex AI Setup Guide](vertex-ai-setup.md) for full instructions.
 
 ---
 
@@ -111,8 +110,7 @@ AIzaSyXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
   "token_uri": "https://oauth2.googleapis.com/token"
 }
 ```
-擴充套件自動簽署 JWT 並換取 Access Token（快取 1 小時）。
-詳細設定流程見 [Vertex AI 設定指南](vertex-ai-setup.md)。
+詳細設定流程請參閱 [Vertex AI 設定指南](vertex-ai-setup.md)。
 
 ---
 
